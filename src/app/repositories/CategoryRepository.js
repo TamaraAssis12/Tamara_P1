@@ -5,7 +5,7 @@ const sqliteConnection = require('../database/sqlite');
 const {v4: uuidv4} = require('uuid');
 
 class CategoryRepository{
-    async create(category){
+    async create(category){ 
         const db = await sqliteConnection();
         const idCategory = uuidv4();
         await db.run(`INSERT INTO categoria(id, nome) VALUES('${idCategory}', '${category.name}')`);

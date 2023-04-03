@@ -19,12 +19,12 @@ class CategoryController{
         response.status(200).json(category);
     }
 
-    async createCategory(request, response){
+    async createCategory(request, response){ 
         const { name } = request.body;
-        if (!name) {
-            return response.status(400).json({ error: "Categoria cadastrada sem nome" })
+        if (!name) { 
+            return response.status(400).json({ error: "Categoria cadastrada sem nome" }) 
           }
-        const category = await CategoryRepository.create({name});
+        const category = await CategoryRepository.create({name}); 
         response.status(201).json(category);
     }
 

@@ -34,7 +34,7 @@ class ProductController {
     response.json(product);
   }
 
-  async update(request, response) {
+  async update(request, response) { 
     const { id } = request.params;
     const { nome, preco, categoria_id, subcategoria } = request.body;
     
